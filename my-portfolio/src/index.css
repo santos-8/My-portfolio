@@ -1,0 +1,206 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* TYPOGRAPHY */
+/* ============================= */
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  color: #cbd5e1;
+}
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
+section {
+  padding: 140px 10%; /* Increased slightly for breathing room */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 22px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 45px; /* 🔥 This creates spacing between About, Projects, Contact */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Smooth hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #8b5cf6;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+button {
+  padding: 14px 28px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  margin-bottom: 40px;
+  color: #94a3b8;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: #0f172a;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #8b5cf6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  section {
+    padding: 90px 6%;
+  }
+
+  .nav-links {
+    gap: 25px; /* Slightly tighter on mobile */
+  }
+
+  .contact-container {
+    padding: 40px 25px;
+  }
+}
